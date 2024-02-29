@@ -1166,26 +1166,26 @@ body {
   max-width: 1200px;
   max-width: 100%;
   margin: auto;
-  outline: 3px solid blue;
 }
 
 .inner {
-  --_scroller-gap: 6rem;
   display: flex;
   align-items: center;
   gap: var(--_scroller-gap);
   flex-wrap: wrap;
   padding: 0;
-  padding-block: 2rem;
+  padding-block: 1rem;
   margin: 0;
   list-style: none;
-  /* border: 1px solid red; */
 }
 
-.inner > * {
+.featured-list {
+  --_scroller-gap: 6rem;
+}
+
+.featured-list > * {
   width: 150px;
   flex-shrink: 0;
-  /* border: 1px solid green; */
 }
 
 .scroller[data-animated="true"] {
@@ -1224,6 +1224,12 @@ body {
 
 .scroller[data-speed="slow"] {
   --_animation-duration: 60s;
+}
+.scroller[data-speed="super-slow"] {
+  --_animation-duration: 90s;
+}
+.scroller[data-speed="hover-slow"] {
+  --_animation-duration: 200s;
 }
 
 @keyframes scroll {
@@ -1264,7 +1270,6 @@ body {
 .cards {
   display: grid;
   gap: 2rem;
-  /* border: 1px solid red; */
 
   @media (min-width: 800px) {
     grid-template-columns: repeat(3, 1fr);
@@ -1312,4 +1317,30 @@ body {
 }
 .blue {
   background-color: #daeafd;
+}
+
+/* ################################################### */
+
+.gallery-scroller {
+  --_scroller-gap: 1.125rem;
+}
+
+.gallery .scroller {
+  mask: none;
+}
+
+.gallery-scroller > * {
+  width: 300px;
+  aspect-ratio: 4 / 3;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.gallery-scroller :is(img, video) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-scroller:is(:hover, :focus) {
+  animation-play-state: paused !important;
 }
