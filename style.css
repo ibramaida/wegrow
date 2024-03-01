@@ -1344,3 +1344,126 @@ body {
 .gallery-scroller:is(:hover, :focus) {
   animation-play-state: paused !important;
 }
+
+/* #################################################### */
+
+.selected-projects > h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.project {
+  position: relative;
+  padding: 3rem 3rem 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  margin-bottom: 3rem;
+  /* outline: 2px solid red; */
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    padding: 3rem;
+    .project-content {
+      flex: 1 0 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-img {
+      flex: 0 0 auto;
+
+      a {
+        display: block;
+        width: 680px;
+        height: 505px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+
+    .project-img {
+      order: 1;
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      order: 2;
+    }
+
+    .project-link {
+      position: static;
+    }
+  }
+}
+
+.selected-projects h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.selected-projects p {
+  font-size: 1.125rem;
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
+}
+
+.project-img {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.project-link {
+  /* border: 1px solid green; */
+  height: 6rem;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+  border-radius: 100vw;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  @media (min-width: 1200px) {
+    position: static;
+  }
+}
+
+.project-grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-areas:
+    "content img img img"
+    "content img img img"
+    "link    img img img";
+}
+
+.project-gird .project-content {
+  grid-area: content;
+}
+.project-gird .project-img {
+  grid-area: img;
+}
+.project-gird .project-link {
+  grid-area: link;
+}
