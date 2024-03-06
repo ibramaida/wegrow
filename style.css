@@ -1677,20 +1677,27 @@ body {
     aspect-ratio: 1;
   }
 
+  &::after {
+    content: "your success story starts here";
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    width: min-content;
+    margin: auto;
+    color: rgba(134, 138, 137, 0.2);
+    position: absolute;
+    inset: 3rem;
+    display: grid;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0;
+    transition: 500ms;
+  }
+
   &:hover {
     &::after {
-      content: "your success story starts here";
-      font-size: 3rem;
-      line-height: 1;
-      text-align: center;
-      width: min-content;
-      margin: auto;
-      color: rgba(134, 138, 137, 0.2);
-      position: absolute;
-      inset: 3rem;
-      display: grid;
-      align-items: center;
-      background-color: #fff;
+      opacity: 1;
+      transition: 500ms;
     }
   }
 }

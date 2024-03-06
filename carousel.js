@@ -37,6 +37,7 @@ const item3 = document.querySelector(".item3");
 const item4 = document.querySelector(".item4");
 const item5 = document.querySelector(".item5");
 const item6 = document.querySelector(".item6");
+const addItem = document.querySelector(".add-item");
 
 const item1Indicator = document.querySelector(".item1-indicator");
 const item2Indicator = document.querySelector(".item2-indicator");
@@ -44,6 +45,7 @@ const item3Indicator = document.querySelector(".item3-indicator");
 const item4Indicator = document.querySelector(".item4-indicator");
 const item5Indicator = document.querySelector(".item5-indicator");
 const item6Indicator = document.querySelector(".item6-indicator");
+const addItemIndicator = document.querySelector(".add-item-indicator");
 
 const options = {
   root: null,
@@ -86,6 +88,11 @@ const observer = new IntersectionObserver(function (entries, observer) {
       item6Indicator.classList.add("active");
     } else {
       item6Indicator.classList.remove("active");
+    }
+    if (entry.target == addItem) {
+      addItemIndicator.classList.add("active");
+    } else {
+      addItemIndicator.classList.remove("active");
     }
   });
 }, options);
