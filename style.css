@@ -1759,6 +1759,10 @@ body {
     font-size: 1.125rem;
     margin-inline: auto;
   }
+  @media (max-width: 800px) {
+  padding: 6rem 1rem;
+
+  }
 }
 
 .services-items {
@@ -1798,3 +1802,108 @@ body {
     font-size: 5rem;
   }
 }
+
+/* ######################################### */
+
+
+
+.benefits-section > p:first-child{
+  width: min-content;
+  color: #fff;
+  border: 1px solid var(--secondary-clr);
+  border-radius: 100vw;
+  padding: 0.25rem 1rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.benefits-section > h2{
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.benefits-section > .read-mode{
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.benefits-section > .pricing {
+  display: block;
+  padding: 1.5rem 3rem;
+  margin-inline: auto;
+  margin-top: 2rem;
+  color: var(--black-bg);
+  background-color: #fff;
+  border: 0;
+  &:hover {
+    background-color: var(--secondary-clr);
+    color: var(--black-bg);
+  }
+}
+
+
+.benefits-grid{
+  max-width: 1024px;
+  margin-inline: auto;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  row-gap: 3rem;
+  justify-items: center;
+
+  margin-top: 3rem;
+
+  
+
+  @media (min-width: 800px){
+  grid-template-columns: repeat(2, 1fr);
+
+  }
+  @media (min-width: 1200px){
+  grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  
+
+
+  > .benefit {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #fff;
+
+    > .benefit-title{
+      font-size: 2rem;
+      
+      @media (max-width: 800px){
+          font-size: 1.4rem;
+        }
+    }
+
+    
+    @media (max-width: 800px){
+        
+      width: 250px;
+    
+  
+    }
+  }
+    
+}
+
+.benefit-img{
+  width: 235px;
+  aspect-ratio: 1;
+}
+
+/* ################################################### */
+
