@@ -1907,3 +1907,155 @@ body {
 
 /* ################################################### */
 
+.pricing-section {
+  background-color: var(--secondary-clr);
+  padding: 6rem 3rem 3rem;
+  border-radius: 3rem;
+  text-align: center;
+  color: var(--body-bg);
+
+  @media (max-width: 800px) {
+    padding: 6rem 1rem 1rem;
+  }
+
+  > p:first-child {
+      width: min-content;
+      border: 1px solid var(--body-bg);
+      border-radius: 100vw;
+      padding: 0.25rem 1rem;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+  }
+
+  > h2{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  > p:not(:first-child){
+    font-size: 1.2rem;
+  }
+}
+
+.pricing-plans{
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 1200px) {
+    .project-based{
+      background-color: red;
+    }
+  }
+}
+
+.plan {
+  padding: 3rem 0rem;
+  text-align: left;
+  border: 1px solid var(--body-bg);
+  border-radius: 2rem;
+
+  .plan-bases{
+    padding-inline: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .plan-title {
+    font-size: 2rem;
+    margin-bottom: .75rem;
+  }
+
+  .featured{
+    color: #fff;
+    background-color: var(--body-bg);
+    border-radius: 100vw ;
+    padding: .25rem .5rem;
+  }
+
+  .plan-desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+  }
+
+  .price-desc {
+    color: rgba(5, 45, 35, 0.5);
+    margin-bottom: 1rem;
+  }
+
+  .plan-btn{
+    border: 1px solid var(--body-bg);
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    color: #fff;
+    background: var(--body-bg);
+    margin-bottom: .75rem;
+    &:hover{
+      background-color: var(--secondary-clr);
+      color: var(--body-bg);
+    }
+  }
+
+  .plan-call{
+    display: block;
+    color: var(--body-bg);
+    text-align: center;
+  }
+}
+
+.plan-features{
+  border-top: 1px solid var(--body-bg);
+  border-radius: 2rem;
+  padding: 3rem 2rem 0rem;
+
+  .plan-features-list{
+    display: grid;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 1.5rem;
+    & li {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      aspect-ratio: 1;
+      background-image: url(./images/check-svgrepo-com.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+    
+  }
+}
+
+.plan-services-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-size: 1rem;
+
+  li {
+    border: 1px solid rgba(5, 45, 35, 0.5);
+    border-radius: 100vw;
+    padding: .125rem .5rem;
+  }
+}
+
