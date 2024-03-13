@@ -2059,3 +2059,126 @@ body {
   }
 }
 
+/* ############################################### */
+
+.add-on-services{
+
+  > h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.add-on-plans{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media(width < 1200px) {
+  grid-template-columns: 1fr;
+
+  }
+}
+
+.add-on{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 3rem;
+  color: var(--body-bg);
+
+  .rounded{
+    border: 1px solid currentColor;
+    border-radius: 100vw;
+    padding: .125rem .5rem;
+    font-weight: 500;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .desc {
+    font-weight: 500;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .cancel{
+    border: 0;
+    color: #95A6A2;
+    p0
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .btn-development{
+    background-color: var(--secondary-clr);
+    border: 1px solid currentColor;
+    position: relative;
+    
+    &:hover::after {
+      content: "";
+      display: grid;
+      place-items: center;
+      position: absolute;
+      
+      inset: 0;
+      background-color: var(--secondary-clr);
+      background-image: url("./images/plus_development.svg");
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-position: 50% 50%;
+      border-radius: 100vw;
+      
+    }
+  }
+
+  .btn-urgent{
+    background-color: #3B193D;
+    color: #fff;
+    border: 0;
+    position: relative;
+
+
+    &:hover::after {
+      content: "";
+      display: grid;
+      place-items: center;
+      position: absolute;
+      
+      inset: 0;
+      background-color: #3B193D;
+      background-image: url("./images/plus_urgent.svg");
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-position: 50% 50%;
+      border-radius: 100vw;
+      
+    }
+  }
+
+  .btn-logo{
+    background-color: #2A105C;
+    color: #fff;
+    border: 0;
+
+  }
+
+  .note{
+    color: currentColor;
+    font-size: .9rem;
+  }
+}
