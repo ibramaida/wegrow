@@ -2182,3 +2182,45 @@ body {
     font-size: .9rem;
   }
 }
+
+/* ################################# */
+
+.faq-section{
+  .rounded{
+    color: #fff;
+    max-width: max-content;
+    margin-inline: auto;
+    /* margin-bottom: 2rem; */
+    margin-top: 9rem;
+    border: 1px solid #ffffff88;
+    border-radius: 100vw;
+    padding: .25rem 1rem;
+  }
+
+  > h2{
+    font-size: var(--fs-800);
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+
+  > p:not(:first-child){
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+    max-width: 50ch;
+    margin-inline: auto;
+    margin-top: 2rem;
+  }
+}
+.accordion-wrapper{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.accordion-item{
+  color: var(--body-bg);
+  background-color: #DAEAFD;
+  padding: 3rem;
+  border-radius: 3rem;
+}
