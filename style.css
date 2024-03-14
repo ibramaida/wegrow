@@ -2210,17 +2210,81 @@ body {
     font-size: 1.3rem;
     max-width: 50ch;
     margin-inline: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 .accordion-wrapper{
   display: grid;
   gap: 1.5rem;
+  margin-top: 5rem;
 }
 
-.accordion-item{
+.accordion-label > button{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+.accordion-panel{
   color: var(--body-bg);
   background-color: #DAEAFD;
-  padding: 3rem;
   border-radius: 3rem;
+}
+
+.accordion-panel > h3{
+  font-size: 1rem;
+  color: var(--body-bg);
+  font-weight: 500;
+  padding: 2rem;
+position: relative;
+}
+
+.accordion-panel > h3:has([aria-expanded="true"]) > button{
+  color: #89A4A4;
+}
+
+.accordion-content{
+  
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 500ms;
+  font-weight: 500;
+}
+
+.accordion-content[aria-hidden="false"] {
+  opacity: 1;
+  grid-template-rows: 1fr;
+  padding-inline: 2rem;
+  padding-block-end: 3rem;
+}
+
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+.accordion-trigger::before,
+.accordion-trigger::after {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: #89A4A4;
+  transition: transform 500ms;
+}
+
+.accordion-trigger::after {
+  rotate: 90deg;
+}
+
+.accordion-trigger[aria-expanded="true"]::before,
+.accordion-trigger[aria-expanded="true"]::after {
+  transform: rotate(45deg);
 }
