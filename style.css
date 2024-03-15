@@ -171,9 +171,9 @@ select {
   --flow-space: 0.75rem;
 }
 
-.section-space > *:where(:not(:first-child)) {
+/* .section-space > *:where(:not(:first-child)) {
   margin-top: var(--section-space, 3rem);
-}
+} */
 
 /**************************************** full width **************************************************/
 /* .wrapper {
@@ -223,6 +223,10 @@ img.full-width {
   background-color: var(--body-bg);
   border-radius: 0 0 3rem 3rem;
   padding-bottom: 6rem;
+}
+
+section{
+  margin-bottom: 5rem;
 }
 
 .wrapper {
@@ -1056,6 +1060,7 @@ body {
   /* margin-top: 5rem; */
   color: #fff;
   text-align: center;
+  padding-top: 6rem;
 }
 
 .hero h1 {
@@ -1126,6 +1131,7 @@ body {
   /* margin-top: 5rem; */
   text-align: center;
   color: #fff;
+  margin-bottom: 4rem;
 }
 
 .note > a {
