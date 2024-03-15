@@ -219,6 +219,12 @@ img.full-width {
   object-fit: cover;
 } */
 
+.main{
+  background-color: var(--body-bg);
+  border-radius: 0 0 3rem 3rem;
+  padding-bottom: 6rem;
+}
+
 .wrapper {
   max-width: calc(100% - 2rem);
   margin-inline: auto;
@@ -882,8 +888,8 @@ img.full-width {
 /* ############################################################################################################## */
 
 body {
-  background-color: var(--body-bg);
-  min-height: 300vh;
+  /* background-color: var(--body-bg); */
+  /* min-height: 300vh; */
   padding-bottom: 5rem;
 }
 
@@ -2300,3 +2306,59 @@ body {
 }
 
 /* ################################################ */
+
+
+.start-today{
+  text-align: center;
+  padding: 3rem 0;
+  /* background-color: #2A105C; */
+  > div {
+    margin-inline: auto;
+    max-width: 800px;
+
+  }
+
+  .start-today-image{
+    width: 4rem;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  h2{
+    font-size: var(--fs-800);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  p{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-wrap: balance;
+    margin-bottom: 4rem;
+    @media (width < 600px){
+      font-size: 1.1rem;
+    }
+  }
+
+  .start-today-btn{
+    width: 60%;
+    height: 7rem;
+    font-size: 2rem;
+    border: 0;
+    background-color: var(--secondary-clr);
+    color: var(--body-bg);
+    transition: 500ms;
+
+    &:hover {
+      background-color: #DBD7FF;
+    }
+
+    @media (width < 800px){
+      width: 100%;
+    }
+  }
+}
+
