@@ -2350,8 +2350,8 @@ body {
   left: 0;
   right: 0; */
   bottom: 0;
-  min-height: 100lvh;
   min-height: 100vh;
+  min-height: 100lvh;
   display: grid;
   grid-template-columns: 10rem 1fr 10rem;
   align-content: end;
