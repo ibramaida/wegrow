@@ -894,7 +894,7 @@ section {
 /* ############################################################################################################## */
 
 body {
-  /* background-color: var(--body-bg); */
+  background-color: #DBD7FF;
   /* min-height: 300vh; */
   /* padding-bottom: 30rem; */
   position: relative;
@@ -2351,7 +2351,6 @@ body {
   right: 0; */
   bottom: 0;
   min-height: 100vh;
-  min-height: 100lvh;
   display: grid;
   grid-template-columns: 10rem 1fr 10rem;
   align-content: end;
@@ -2368,6 +2367,8 @@ body {
   }
 
   @media (width < 500px) {
+  min-height: 40vh;
+
     font-size: 0.9rem;
     grid-template-columns: auto 1fr auto;
     padding: 0 1rem;
