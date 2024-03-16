@@ -894,7 +894,7 @@ section {
 /* ############################################################################################################## */
 
 body {
-  background-color: #DBD7FF;
+  background-color: #dbd7ff;
   /* min-height: 300vh; */
   /* padding-bottom: 30rem; */
   position: relative;
@@ -1049,6 +1049,10 @@ body {
   &:hover {
     background-color: var(--secondary-clr);
     color: var(--black-bg);
+  }
+
+  @media (width < 400px) {
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -2087,6 +2091,10 @@ body {
   border-radius: 3rem;
   color: var(--body-bg);
 
+  @media (width < 500px) {
+    padding: 3rem 2rem;
+  }
+
   .rounded {
     border: 1px solid currentColor;
     border-radius: 100vw;
@@ -2171,6 +2179,7 @@ body {
   .note {
     color: currentColor;
     font-size: 0.9rem;
+    margin-bottom: 0;
   }
 }
 
@@ -2181,7 +2190,6 @@ body {
     color: #fff;
     max-width: max-content;
     margin-inline: auto;
-    margin-top: 9rem;
     border: 1px solid #ffffff88;
     border-radius: 100vw;
     padding: 0.25rem 1rem;
@@ -2232,6 +2240,10 @@ body {
   font-weight: 500;
   padding: 2rem 3rem;
   position: relative;
+
+  @media (width < 500px) {
+    padding-inline-start: 1.5rem;
+  }
 }
 
 .accordion-panel > h3:has([aria-expanded="true"]) > button {
@@ -2256,6 +2268,11 @@ body {
   grid-template-rows: 1fr;
   padding-inline: 3rem;
   padding-block-end: 3rem;
+  text-wrap: balance;
+
+  @media (width < 500px) {
+    padding-inline-start: 1.5rem;
+  }
 }
 
 .accordion-content > div {
@@ -2367,7 +2384,7 @@ body {
   }
 
   @media (width < 500px) {
-  min-height: 40vh;
+    min-height: 40vh;
 
     font-size: 0.9rem;
     grid-template-columns: auto 1fr auto;
