@@ -895,8 +895,10 @@ section {
 
 body {
   background-color: #dbd7ff;
+
   /* min-height: 300vh; */
   /* padding-bottom: 30rem; */
+
   position: relative;
 }
 
@@ -905,24 +907,52 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 1rem;
   padding-block: 1rem;
+  margin-inline: 1rem;
+
+  background-color: var(--body-bg);
+  -webkit-box-shadow: -200px 0px 0px 0px var(--body-bg),
+    200px 0px 0px 0px var(--body-bg);
+  -moz-box-shadow: -200px 0px 0px 0px var(--body-bg),
+    200px 0px 0px 0px var(--body-bg);
+  box-shadow: -200px 0px 0px 0px var(--body-bg),
+    200px 0px 0px 0px var(--body-bg);
+
+  position: sticky;
+  top: -5rem;
+  z-index: 10;
+
+  /* animation: stickynav linear forwards; */
+
+  backdrop-filter: blur(21px);
   /* border: 1px solid red; */
+
+  @media (min-width: 1200px) {
+    margin-inline: 4.5rem;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .header {
+    animation: stickynav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 130vh;
+    animation-range-end: 150vh;
+  }
 }
 
 .header.sticky {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  border-radius: 100vw;
-  padding-inline: 1rem;
-  background-color: rgba(33, 74, 50, 0.5);
-  backdrop-filter: blur(21px);
-  @media (min-width: 1200px) {
-    left: 4.5rem;
-    right: 4.5rem;
+  animation: stickynav 350ms linear forwards;
+}
+
+@keyframes stickynav {
+  100% {
+    top: 1.5rem;
+    background-color: rgba(33, 74, 50, 0.5);
+    border-radius: 100vw;
+    box-shadow: none;
   }
-  z-index: 100;
 }
 
 .logo {
@@ -2363,11 +2393,12 @@ body {
 
 .footer {
   position: sticky;
-  /* top: 0;
-  left: 0;
-  right: 0; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
   bottom: 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
+  /* min-height: 100vh; */
   display: grid;
   grid-template-columns: 10rem 1fr 10rem;
   align-content: end;
