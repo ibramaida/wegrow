@@ -923,16 +923,27 @@ body {
   top: -5rem;
   z-index: 10;
 
-  animation: stickynav linear forwards;
-  animation-timeline: view();
-  animation-range-start: 130vh;
-  animation-range-end: 150vh;
+  /* animation: stickynav linear forwards; */
+
   backdrop-filter: blur(21px);
   /* border: 1px solid red; */
 
   @media (min-width: 1200px) {
     margin-inline: 4.5rem;
   }
+}
+
+@supports (animation-timeline: view()) {
+  .header {
+    animation: stickynav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 130vh;
+    animation-range-end: 150vh;
+  }
+}
+
+.header.sticky {
+  animation: stickynav 350ms linear forwards;
 }
 
 @keyframes stickynav {
@@ -943,22 +954,6 @@ body {
     box-shadow: none;
   }
 }
-
-/* .header.sticky {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  border-radius: 100vw;
-  padding-inline: 1rem;
-  background-color: rgba(33, 74, 50, 0.5);
-  backdrop-filter: blur(21px);
-  @media (min-width: 1200px) {
-    left: 4.5rem;
-    right: 4.5rem;
-  }
-  z-index: 100;
-} */
 
 .logo {
   flex-shrink: 0;
